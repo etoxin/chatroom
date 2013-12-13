@@ -1,0 +1,33 @@
+!!!
+html
+	head
+		title= "Real time web chat"
+		script(src='/socket.io/socket.io.js')
+		script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js')
+		script(src='/chat.js')
+		script(src='/bootstrap.min.js')
+		link(rel='stylesheet' href='/bootstrap.min.css')
+		link(rel='stylesheet' href='/bootstrap-responsive.min.css')
+	body
+		.container
+			.row
+				.span12
+					h1 The Coolest Place on Earth
+					#content(style='height: 500px; border: solid 1px #999; overflow-y: scroll; border-radius: 5px;padding:10px;')
+				.span12
+					p version 2.1
+				.span12
+					form
+						.input-prepend
+							span.add-on name
+							input#name.input-block-level(type='text')
+				.span12
+					form
+						.input-prepend
+							span.add-on colour
+							input#hex(type='text')
+				.span12
+					.input-append
+						input#field.input-block-level(type='text')
+						input#send.btn(type='button', value='send')
+
